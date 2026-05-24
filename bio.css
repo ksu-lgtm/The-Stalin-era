@@ -132,14 +132,8 @@ p {
 
 
 
-.ych {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    margin: 40px 180px;          
-}
 
-.podpol {
+.bio-block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
