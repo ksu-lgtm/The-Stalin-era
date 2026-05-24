@@ -4,7 +4,7 @@ $('.slider').slick({
     centerMode: false,
     variableWidth: false,
     adaptiveHeight: false,
-    arrows: true,
+    arrows: true
    
 });
 

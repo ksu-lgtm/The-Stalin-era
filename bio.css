@@ -3,6 +3,10 @@
 }
 
 
+
+html {
+    scroll-behavior: smooth;
+}
 header{
 background-image: url("./img/СМОТРИТ.png");
 background-position: center 100%;
@@ -13,12 +17,6 @@ min-height: 100vh;
 border: 3px solid white;
 position: relative;
 }
-
-.header h4 {
-    position: relative;
-    left: 300px;              
-}
-
 
 
 .container{
@@ -31,36 +29,11 @@ position: relative;
 
 }
 
-.logo {
-    position: absolute;
-    top: 5px;     
-    right: 40px;     
-
-}
-.logo img{
-    width: 130px;
-    height: auto;
-}
-
-
-
-
-
-
-.otd_nav{
-
-  border: none;              
-  height: 1px;                 
-  background-color: #ffffff;   
-            
-  width: 100%;                 
-  margin: 20px auto;        
-}
 
 nav {
     display: flex;          
     gap: 22px;
-    align-items: center;           
+               
 }
 
 nav a {
@@ -68,16 +41,29 @@ nav a {
     font-size: 28px;
     text-decoration: none;
     font-family: "Times New Roman", Times, serif;
-    height: 100%;              
     display: flex;
     align-items: center;        
-    line-height: 1;             
-    padding: 0;                
+               
 }
 
+.logo {
+    position: absolute;
+    top: 5px;
+    right: 40px;
+}
 
+.logo img {
+    width: 130px;      
+    height: auto;
+}
 
-
+.otd_nav{
+  border: none;              
+  height: 1px;                 
+  background-color: #ffffff;        
+  width: 100%;                 
+  margin: 20px auto;        
+}
 
 
 .header-content{
@@ -90,6 +76,10 @@ nav a {
 .header-content h4{
     font-size: 40px;
     
+}
+
+.header-content h4 span{
+    margin-left: 300px;
 }
 
 
@@ -229,35 +219,27 @@ footer {
     color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;  
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;/*чтобы отступы считались в ширине*/
 }
 
-.stopimg {
-    flex-shrink: 0;
-}
-
-.stopimg img {
+.footer-logo {
     width: 120px;
     height: auto;
     display: block;
-}
-
-.containerff {
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.6;
+    flex-shrink: 0;  
 }
 
 .containerff p {
-
+    text-align: center; 
     margin: 5px 0;
-    white-space: nowrap;
-    font-size: 16px;
-
+    white-space: normal;/*для текста*/
+    font-size: 18px;
 }
+
 
 .scroll-top-button {
     position: fixed;
@@ -269,8 +251,8 @@ footer {
     height: 50px;
     border-radius: 50%;
     text-align: center;
-    line-height: 50px;
+    line-height: 50px;/*Высота строки как у кнопки*/
     font-size: 30px;
     text-decoration: none;
     z-index: 999;
-}
+}   

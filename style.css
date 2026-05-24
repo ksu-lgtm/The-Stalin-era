@@ -3,6 +3,10 @@
 }
 
 
+html {
+    scroll-behavior: smooth;
+}
+
 header{
 background-image: url("./img/дух сталина.jpg");
 
@@ -13,6 +17,7 @@ min-height: 100vh;
 border: 3px solid white;
 position: relative;
 }
+
 .container{
     display: flex;
     flex-wrap: wrap;
@@ -24,20 +29,10 @@ position: relative;
 }
 
 
-.otd_nav{
-
-  border: none;              
-  height: 1px;                 
-  background-color: #ffffff;   
-            
-  width: 100%;                 
-  margin: 20px auto;        
-}
-
 nav {
     display: flex;          
     gap: 22px;
-    align-items: center;           
+               
 }
 
 nav a {
@@ -45,27 +40,30 @@ nav a {
     font-size: 28px;
     text-decoration: none;
     font-family: "Times New Roman", Times, serif;
-    height: 100%;              
     display: flex;
     align-items: center;        
-    line-height: 1;             
-    padding: 0;                
+               
 }
-
 
 .logo {
     position: absolute;
-    top: 5px;     
-    right: 40px;     
-
+    top: 5px;
+    right: 40px;
 }
-.logo img{
-    width: 130px;
+
+.logo img {
+    width: 130px;      
     height: auto;
 }
 
 
-
+.otd_nav{
+  border: none;              
+  height: 1px;                 
+  background-color: #ffffff;        
+  width: 100%;                 
+  margin: 20px auto;        
+}
 
 
 .header-content{
@@ -82,12 +80,16 @@ nav a {
 
 .header-content h4 span{
     margin-left: 300px;
-    font-size: 40px;
 }
 
 
 
 
+body {
+    background: linear-gradient(#656a81, #755930) no-repeat fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
 
 .intro-text p{
     color: #000000;
@@ -98,71 +100,55 @@ nav a {
 }
 
 
-
-
-
-body {
-    background: linear-gradient(#656a81, #755930) no-repeat fixed;
-    background-size: cover;
-    min-height: 100vh;
-
+.slider {
+    width: 80%;
+    margin: 80px auto;  
+    padding: 0 0 100px 0; 
+    position: relative;
 }
 
-
-
+.slick-slider {
+    padding: 0 20px;              
+            
+}
 
 a.card-bio {
-    background-image: url("./img/биография.jpg") !important; 
+    background-image: url("./img/биография.jpg"); 
 }
 
 a.card-dev {
-    background-image: url("./img/пл.png") !important;
+    background-image: url("./img/пл.png");
 }
 
-a.card-person {
-    background-image: url("./img/накарточку.png") !important; 
+a.card-map {
+    background-image: url("./img/накарточку.png"); 
 }
 
-a.card-hrono {
-    background-image: url("./img/газеты.jpg") !important; 
+a.card-test {
+    background-image: url("./img/газеты.jpg"); 
 }
 
 
-.slider {
-    width: 80%;
-    margin: 80px auto 80px auto;  
-    padding: 0 0 100px 0; 
-}
 
 a.card {
-    
-    background: rgb(148, 148, 148);
-    min-height: 600px !important;
-    height: 600px !important;   
-    
+    min-height: 600px;
+    height: 600px;   
     border-radius: 10px;   
     padding: 20px;        
-    color: white;           
+    text-decoration: none;           
     display: flex;          
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    background-size: cover !important;      
-    background-position: center !important; 
-    background-repeat: no-repeat !important; 
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat; 
     cursor: pointer;
-    
-
 }
 
 
-
-.card p, a.card p {
+.card p{
     color: white;                   
-     
     font-size: 30px;              
-
 }
 
 .slick-arrow{
@@ -170,10 +156,9 @@ a.card {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: none;
     background-color: rgb(218, 216, 214);
     background-image: url("./img/right.png");
-    border: 1px solid rgb(156, 154, 154);
+    border: 1px solid rgb(110, 108, 108);
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
@@ -191,10 +176,7 @@ a.card {
     right:0;
     
 }
-.slick-slider {
-    padding: 0 20px;              
-    box-sizing: border-box;           
-}
+
 
 
 
@@ -205,35 +187,27 @@ footer {
     color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;  
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;/*чтобы отступы считались в ширине*/
 }
 
-.stopimg {
-    flex-shrink: 0;
-}
-
-.stopimg img {
+.footer-logo {
     width: 120px;
     height: auto;
     display: block;
-}
-
-.containerff {
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.6;
+    flex-shrink: 0;  
 }
 
 .containerff p {
-
+    text-align: center; 
     margin: 5px 0;
-    white-space: nowrap;
-    font-size: 16px;
-
+    white-space: normal;/*для текста*/
+    font-size: 18px;
 }
+
 
 .scroll-top-button {
     position: fixed;
@@ -245,8 +219,8 @@ footer {
     height: 50px;
     border-radius: 50%;
     text-align: center;
-    line-height: 50px;
+    line-height: 50px;/*Высота строки как у кнопки*/
     font-size: 30px;
     text-decoration: none;
     z-index: 999;
-}      
+}   
