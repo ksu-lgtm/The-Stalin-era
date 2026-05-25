@@ -169,7 +169,6 @@ body {
     max-width: 700px;
     color: black;
     
-    
     position: fixed;
     top: 50%;
     left: 50%;
@@ -178,7 +177,7 @@ body {
 
 .close {
     color: #8a8888;
-    float: right;
+    float: right;/*обтекание*/
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
